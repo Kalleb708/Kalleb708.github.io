@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Curriculo usando HTML - Kalleb</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Geologica:wght,CRSV@100..900,0&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: rgb(255, 251, 226);
+                color: rgb(45, 40, 7);
+                font-family: "Cabin", sans-serif;
+                font-weight: 400;
+            }
+            header{
+                padding: 2rem;
+                background-color: rgb(44, 38, 0);
+                color:rgb(244, 244, 244);
+                text-align: center;
+            }
+            nav{
+            background-color: #472a00;
+            padding: 10px;
+            text-align: center;
+            }
+            nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            }
+            nav a:hover {
+            text-decoration: underline;
+            }
+            main{
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            section{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            aside{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            img{
+                width: 12rem;
+                border-radius: 5px;
+            }
+            footer{
+                background-color: rgb(44, 38, 0);
+                color:rgb(244, 244, 244);
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img
+                src="my_photo.jpeg"
+                alt="Foto de Perfil"
+                width="150"
+                height="200"
+                loading="lazy"
+            />
+            <h1>Kalleb Felipe Melo de Oliveira</h1>
+            <h2>Bacharelado em Sistemas de Informação - IFAL (1° Período)</h2>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#descricao">Descrição Pessoal</a></li>
+                <li><a href="#conhecimentos">Conhecimentos</a></li>
+                <li><a href="#curso">Informações sobre o curso</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="descricao">
+                <h3>Descrição pessoal:</h3>
+                <article>
+                    <p>
+                        Me chamo Kalleb, atualmente estou cursando o bacharelado em Sistemas de Informação 
+                        pelo IFAL. Gosto da área da tecnologia desde novo e sempre me interessei em aprender e 
+                        conhecer o mundo da computação mais a fundo, sempre estudei por conta própria
+                        alguns ramos e tecnológias da área da TI, o que me levou a ingressar em um 
+                        curso superior no ramo da computação.
+                    </p>
+                </article>
+            </section>
+
+            <section id="conhecimentos">
+                <h3>Conhecimentos:</h3>
+                <ul>
+                    <li>Python (básico)</li>
+                    <li>C (básico)</li>
+                    <li>HTML (básico)</li>
+                    <li>CSS (básico)</li>
+                </ul>
+            </section>
+
+            <aside id="curso">
+                <h3>Informações do curso de Bacharelado em Sistemas de Informação:</h3>
+                <p>
+                    O bacharelado em Sistemas de Informação (SI) é um curso superior de 4 anos 
+                    (8 semestres) que une tecnologia da computação e gestão de negócios. Forma 
+                    profissionais aptos a desenvolver, implantar e gerenciar sistemas de 
+                    informação em empresas, focando em soluções de software, banco de dados e 
+                    infraestrutura de TI.
+                </p>
+                <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/superior/bacharelado-em-sistemas-de-informacao" target="_blank" rel="noopener noreferrer">
+                    Site do IFAL para mais informações do curso
+                </a>
+            </aside>
+        </main>
+
+        <footer>
+            <h3>Data de nascimento: 26/02/2004</h3>
+            <h3>Email: kallebfelipe708@gmail.com</h3>
+        </footer>
+</html>
