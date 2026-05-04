@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário — Cap. 5 / Ativ. 1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Geologica:wght,CRSV@100..900,0&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(255, 251, 226);
+        color: rgb(45, 40, 7);
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+    }
+    h1 {
+        padding: 2rem;
+        background-color: rgb(44, 38, 0);
+        color:rgb(244, 244, 244);
+        text-align: center;
+        box-sizing: border-box;
+    }
+    form {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    form div {
+        margin-bottom: 15px;
+    }
+    p {
+        background-color: #472a00;
+        padding: 10px;
+        text-align: center;
+    }
+    p a {
+        color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+    }
+    p a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Usuário</h1>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <div>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required minlength="3">
+        </div>
+
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="8">
+        </div>
+
+        <div>
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+        </div>
+
+        <fieldset>
+            <legend>Gênero:</legend>
+
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" id="feminino" name="genero" value="feminino">
+            <label for="feminino">Feminino</label>
+
+            <input type="radio" id="outro" name="genero" value="outro">
+            <label for="outro">Outro</label>
+
+            <input type="radio" id="prefiro_nao_informar" name="genero" value="prefiro_nao_informar">
+            <label for="prefiro_nao_informar">Prefiro não informar</label>
+        </fieldset>
+
+        <div>
+            <input type="checkbox" id="aceite" name="aceite" value="sim" required>
+            <label for="aceite">Aceito os termos de uso</label>
+        </div>
+
+        <div>
+            <button type="submit">Criar conta</button>
+            <button type="reset">Limpar campos</button>
+        </div>
+    </form>
+
+    <p><a href="../index.html">← Voltar para página inicial</a></p>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Matrícula — Cap. 5 / Ativ. 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Geologica:wght,CRSV@100..900,0&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(255, 251, 226);
+        color: rgb(45, 40, 7);
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+    }
+    h1 {
+        padding: 2rem;
+        background-color: rgb(44, 38, 0);
+        color:rgb(244, 244, 244);
+        text-align: center;
+        box-sizing: border-box;
+    }
+    h2 {
+        text-align: center;
+    }
+    form {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    form div {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    p {
+        background-color: #472a00;
+        padding: 10px;
+        text-align: center;
+    }
+    p a {
+        color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+    }
+    p a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Solicitação de Matrícula</h1>
+    <h2>* Campos Obrigatórios</h2>
+
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label>Nome completo *:
+                <input type="text" name="nome" required minlength="5" maxlength="100">
+            </label>
+
+            <label>CPF *:
+                <input type="text" name="cpf" required 
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                placeholder="000.000.000-00"
+                title="CPF no formato 000.000.000-00">
+            </label>
+
+            <label>Telefone:
+                <input type="tel" name="telefone"
+                pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                placeholder="(82) 99999-9999">
+            </label>
+
+            <label>E-mail *:
+                <input type="email" name="email" required>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados Acadêmicos</legend>
+
+            <label>Curso *:
+                <select name="curso" required>
+                    <option value="">Selecione um curso</option>
+
+                    <optgroup label="Computação">
+                        <option>Sistemas de Informação</option>
+                        <option>Ciência da Computação</option>
+                        <option>Engenharia da Computação</option>
+                    </optgroup>
+
+                    <optgroup label="Gestão">
+                        <option>Administração</option>
+                        <option>Ciências Contábeis</option>
+                    </optgroup>
+                </select>
+            </label>
+
+            <fieldset>
+                <legend>Período *</legend>
+
+                <label>
+                    <input type="radio" name="periodo" value="manha" required class="inline"> Manhã
+                </label>
+
+                <label>
+                    <input type="radio" name="periodo" value="tarde" class="inline"> Tarde
+                </label>
+
+                <label>
+                    <input type="radio" name="periodo" value="noite" class="inline"> Noite
+                </label>
+            </fieldset>
+
+            <label>Ano de ingresso *:
+                <input type="number" name="ano_ingresso" min="2025" max="2030" required>
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Áreas de Interesse</legend>
+
+            <label>
+                <input type="checkbox" name="interesses[]" value="web" class="inline"> Desenvolvimento Web
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesses[]" value="bd" class="inline"> Banco de Dados
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesses[]" value="ia" class="inline"> Inteligência Artificial
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesses[]" value="seguranca" class="inline"> Segurança da Informação
+            </label>
+
+            <label>
+                <input type="checkbox" name="interesses[]" value="infra" class="inline"> Infraestrutura
+            </label>
+
+        </fieldset>
+
+        <div class="botoes">
+            <input type="submit" value="Solicitar matrícula">
+            <input type="reset" value="Limpar formulário">
+        </div>
+    </form>
+
+    <p><a href="../index.html">← Voltar para página inicial</a></p>
+
+</body>
+</html>

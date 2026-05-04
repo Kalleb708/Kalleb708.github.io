@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>>Formulário de Pesquisa Acadêmica — Cap. 5 / Ativ. 3</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(255, 251, 226);
+        color: rgb(45, 40, 7);
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+    }
+    h1 {
+        padding: 2rem;
+        background-color: rgb(44, 38, 0);
+        color:rgb(244, 244, 244);
+        text-align: center;
+        box-sizing: border-box;
+    }
+    h2 {
+        text-align: center;
+    }
+    form {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    form div {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .p-nav {
+        background-color: #472a00;
+        padding: 10px;
+        text-align: center;
+    }
+    .p-nav a {
+        color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+    }
+    .p-nav a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Pesquisa de Perfil Acadêmico e Satisfação</h1>
+<h2>* Campos Obrigatórios</h2>
+
+<form action="https://httpbin.org/post" method="post" novalidate>
+
+<fieldset>
+<legend>Perfil do estudante</legend>
+
+<label>Nome completo *:
+<input type="text" name="nome" required aria-required="true" autocomplete="name">
+</label>
+
+<label>Matrícula *:
+<input type="text" name="matricula" required pattern="\d{7}" aria-required="true">
+<small>7 dígitos numéricos</small>
+</label>
+
+<label for="email">E-mail institucional *:</label>
+<input
+  type="email"
+  id="email"
+  name="email"
+  required
+  autocomplete="email"
+  aria-required="true"
+  aria-invalid="false"
+  aria-describedby="erro-email"
+  onblur="validarEmail(this)"
+>
+<p id="erro-email" class="erro" role="alert"></p>
+
+<label>Período *:
+<select name="periodo" required aria-required="true">
+<option value="">Selecione</option>
+<option>1º</option>
+<option>2º</option>
+<option>3º</option>
+<option>4º</option>
+<option>5º</option>
+<option>6º</option>
+<option>7º</option>
+<option>8º</option>
+</select>
+</label>
+
+<fieldset>
+<legend>Turno *</legend>
+<label><input type="radio" name="turno" value="manha" required class="inline"> Manhã</label>
+<label><input type="radio" name="turno" value="tarde" class="inline"> Tarde</label>
+<label><input type="radio" name="turno" value="noite" class="inline"> Noite</label>
+</fieldset>
+
+</fieldset>
+
+<fieldset>
+<legend>Perfil tecnológico</legend>
+
+<fieldset>
+<legend>Tecnologias que conhece</legend>
+
+<label><input type="checkbox" name="tecnologias[]" value="html" class="inline"> HTML</label>
+<label><input type="checkbox" name="tecnologias[]" value="css" class="inline"> CSS</label>
+<label><input type="checkbox" name="tecnologias[]" value="js" class="inline"> JavaScript</label>
+<label><input type="checkbox" name="tecnologias[]" value="python" class="inline"> Python</label>
+<label><input type="checkbox" name="tecnologias[]" value="java" class="inline"> Java</label>
+<label><input type="checkbox" name="tecnologias[]" value="c" class="inline"> C</label>
+<label><input type="checkbox" name="tecnologias[]" value="sql" class="inline"> C#</label>
+<label><input type="checkbox" name="tecnologias[]" value="git" class="inline"> G++</label>
+
+</fieldset>
+
+<label>Linguagem favorita:
+<select name="linguagem">
+    <optgroup label="Orientada a Objetos">
+        <option>Java</option>
+        <option>C#</option>
+    </optgroup>
+    <optgroup label="Procedural">
+        <option>C</option>
+        <option>Python</option>
+    </optgroup>
+</select>
+</label>
+
+<label>Anos de experiência:
+<input type="number" name="experiencia" min="0" max="30">
+</label>
+
+<label>Portfólio ou LinkedIn:
+<input type="url" name="portfolio" placeholder="https://">
+</label>
+
+</fieldset>
+
+<fieldset>
+<legend>Avaliação da disciplina</legend>
+
+<label>
+Nota: <span id="valor-nota">5</span>/10
+</label>
+<input
+type="range"
+name="nota"
+min="0"
+max="10"
+value="5"
+oninput="document.getElementById('valor-nota').textContent = this.value"
+>
+
+<fieldset>
+<legend>Satisfação</legend>
+<label><input type="radio" name="satisfacao" value="muito" class="inline"> Muito satisfeito</label>
+<label><input type="radio" name="satisfacao" value="satisfeito" class="inline"> Satisfeito</label>
+<label><input type="radio" name="satisfacao" value="neutro" class="inline"> Neutro</label>
+<label><input type="radio" name="satisfacao" value="insatisfeito" class="inline"> Insatisfeito</label>
+<label><input type="radio" name="satisfacao" value="muito_insatisfeito" class="inline"> Muito insatisfeito</label>
+</fieldset>
+
+<label>Sugestões:
+<textarea name="sugestoes" maxlength="1000" rows="6"></textarea>
+</label>
+
+<label>Data de preenchimento *:
+<input type="date" id="data_preenchimento" name="data_preenchimento" required aria-required="true">
+</label>
+
+</fieldset>
+
+<fieldset>
+<legend>Consentimento e envio</legend>
+
+<label>
+<input type="checkbox" name="consentimento" required aria-required="true" class="inline">
+Autorizo o uso dos dados para fins acadêmicos *
+</label>
+
+<input type="hidden" name="pesquisa_id" value="PWEB1-2026-1">
+
+<button type="submit">Enviar pesquisa</button>
+
+</fieldset>
+
+</form>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script>
+function validarEmail(campo) {
+    const erro = document.getElementById('erro-email');
+
+    if (!campo.value.endsWith('@ifal.edu.br')) {
+        erro.textContent = 'Informe seu e-mail institucional (@ifal.edu.br)';
+        campo.setAttribute('aria-invalid', 'true');
+    } else {
+        erro.textContent = '';
+        campo.setAttribute('aria-invalid', 'false');
+    }
+}
+
+document.getElementById('data_preenchimento').max =
+new Date().toISOString().split('T')[0];
+</script>
+
+<p class="p-nav"><a href="../index.html">← Voltar à página principal</a></p>
+
+</body>
+</html>

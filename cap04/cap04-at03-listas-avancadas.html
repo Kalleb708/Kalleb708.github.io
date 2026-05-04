@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Listas Avançadas — Cap. 4 / Ativ. 3</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Geologica:wght,CRSV@100..900,0&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(255, 251, 226);
+        color: rgb(45, 40, 7);
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+    }
+    h1 {
+        padding: 2rem;
+        background-color: rgb(44, 38, 0);
+        color:rgb(244, 244, 244);
+        text-align: center;
+        box-sizing: border-box;
+        
+    }
+    section {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+    }
+    ol {
+        padding-left: 40px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+    dt {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    dd {
+        margin-left: 20px;
+        margin-bottom: 8px;
+    }
+    ul {
+        padding-left: 20px;
+    }
+    .p-nav {
+        background-color: #472a00;
+        padding: 10px;
+        text-align: center;
+    }
+    .p-nav a {
+        color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+    }
+    .p-nav a:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guia de Referência Rápida — Desenvolvimento Web</h1>
+
+  <section>
+    <h2>1. Roteiro de Estudos</h2>
+    <p>Etapa 1 — Fundamentos:</p>
+    <ol type="1">
+      <li>
+        HTML e semântica
+        <ol type="a">
+          <li>Estrutura básica</li>
+          <li>Elementos semânticos</li>
+        </ol>
+      </li>
+      <li>
+        CSS e Estilização
+        <ol type="a">
+            <li>Formatação de Texto e Fontes</li>
+            <li>Cores e Fundo</li>
+        </ol>
+      </li>
+      <li>
+        JavaScript e Interatividade
+        <ol type="a">
+            <li>Declaração de Função (Function Declaration)</li>
+            <li>Parâmetros e Retorno</li>
+        </ol>
+      </li>
+    </ol>
+    <p>Etapa 2 — Integração com outras tecnologias:</p>
+    <ol type="1" start="4">
+      <li>
+        Integração com Git
+        <ol type="a">
+            <li>Commits</li>
+            <li>Branches</li>
+        </ol>
+      </li>
+      <li>
+        Frameworks/Bibliotecas (Frontend)
+        <ol type="a">
+            <li>React.js (mais popular)</li>
+            <li>Vue.js (fácil aprendizado)</li>
+        </ol>
+      </li>
+      <li>
+        Bancos de Dados (Backend)
+        <ol type="a">
+            <li>SQL (PostgreSQL, MySQL)</li>
+            <li>NoSQL (MongoDB)</li>
+        </ol>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>2. Ranking de Tecnologias</h2>
+    <ol reversed>
+       <li>
+        GitHub
+        <p>O GitHub é a maior plataforma de hospedagem de código-fonte e projetos do mundo, utilizando o sistema Git para controle de versão.</p>
+       </li>
+
+       <li>
+        Git
+        <p>Git é um sistema de controle de versão distribuído, gratuito e de código aberto, utilizado para rastrear alterações em arquivos de código-fonte durante o desenvolvimento de software.</p>
+       </li>
+
+       <li>
+        JavaScript
+        <p>JavaScript (JS) é uma linguagem de programação interpretada, de alto nível e multiparadigma, fundamental para o desenvolvimento web.</p>
+       </li>
+
+       <li>
+        CSS
+        <p>CSS é uma linguagem de estilo fundamental utilizada para definir a apresentação visual de documentos HTML.</p>
+       </li>
+
+       <li>
+        HTML
+        <p>HTML é a linguagem de marcação padrão para criar a estrutura de páginas web.</p>
+       </li>
+
+    </ol>
+  </section>
+
+  <section>
+    <h2>3. Glossário Técnico</h2>
+    <dl>
+      <!-- mínimo 8 termos -->
+       <dt>HTML</dt>
+       <dd>linguagem de marcação padrão para criar a estrutura de páginas web.</dd>
+
+       <dt>CSS</dt>
+       <dd>linguagem de estilo fundamental utilizada para definir a apresentação visual de documentos HTML.</dd>
+
+       <dt>JavaScript</dt>
+       <dd>linguagem de programação interpretada, de alto nível e multiparadigma, fundamental para o desenvolvimento web.</dd>
+
+       <dt>DOM</dt>
+       <dd>uma interface que representa páginas HTML/XML como uma árvore de objetos para manipulação por scripts.</dd>
+
+       <dt>API</dt>
+       <dd>é um conjunto de regras e protocolos que permite que dois softwares conversem entre si.</dd>
+
+       <dt>HTTP</dt>
+       <dd>é o conjunto de regras fundamental para a troca de dados na World Wide Web (WWW).</dd>
+
+       <dt>URL</dt>
+       <dd>É o endereço exclusivo e padronizado utilizado para localizar recursos na internet, como páginas web, imagens ou arquivos.</dd>
+
+       <dt>DNS</dt>
+       <dd> (Domain Name System - Sistema de Nomes de Domínio) é a "agenda telefônica da internet", responsável por traduzir nomes de domínio fáceis de lembrar (como www.google.com) em endereços IP numéricos (como 192.0.2.1) que os computadores usam para se localizar e carregar recursos na rede.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>4. Mapa de Tecnologias</h2>
+    <ul>
+      <!-- hierarquia com 3 níveis -->
+       <li>
+        Desenvolvimento Web
+        <ul>
+            <li>
+                Frontend
+                <ul>
+                    <li>
+                        Linguagens
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Frameworks
+                        <ul>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                            <li>Angular</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                Backend
+                <ul>
+                    <li>
+                        Linguagens
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Banco de Dados
+                        <ul>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+       </li>
+    </ul>
+  </section>
+
+  <p class="p-nav"><a href="../index.html">← Voltar à página principal</a></p>
+</body>
+</html>

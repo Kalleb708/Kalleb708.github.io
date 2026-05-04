@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição em Evento com Campos Avançados — Cap. 5 / Ativ. 3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Geologica:wght,CRSV@100..900,0&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(255, 251, 226);
+        color: rgb(45, 40, 7);
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+    }
+    h1 {
+        padding: 2rem;
+        background-color: rgb(44, 38, 0);
+        color:rgb(244, 244, 244);
+        text-align: center;
+        box-sizing: border-box;
+    }
+    form {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    form div {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    p {
+        background-color: #472a00;
+        padding: 10px;
+        text-align: center;
+    }
+    p a {
+        color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+    }
+    p a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>Inscrição — Semana de Tecnologia IFAL</h1>
+
+    <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="edicao" value="2026">
+
+        <fieldset>
+            <legend>Dados do participante</legend>
+
+            <label>Nome completo:
+                <input type="text" name="nome" required>
+            </label>
+
+            <label>E-mail institucional:
+                <input type="email" name="email" required>
+            </label>
+
+            <label>Cidade de origem:
+                <input list="cidades" name="cidade">
+                <datalist id="cidades">
+                    <option value="Maceió">
+                    <option value="Arapiraca">
+                    <option value="Satuba">
+                    <option value="Rio Largo">
+                    <option value="Marechal Deodoro">
+                    <option value="Paripueira">
+                    <option value="Barra de Santo Antônio">
+                    <option value="Pilar">
+                </datalist>
+            </label>
+
+            <label for="foto">Foto para crachá:</label>
+            <input 
+                type="file" 
+                id="foto"
+                name="foto"
+                accept="image/jpeg,image/png"
+                aria-describedby="info-foto"
+            >
+            <small id="info-foto">
+                Formatos de imagem aceitos: JPG e PNG. Tamanho máximo: 2 MB.
+            </small>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferências para o evento</legend>
+
+            <label>Data e hora preferida para chegada:
+                <input type="datetime-local" name="chegada">
+            </label>
+
+            <label for="experiencia">
+                Nível de experiência: <span id="valor-experiencia">5</span>/10
+            </label>
+            <input
+                type="range"
+                id="experiencia"
+                name="experiencia"
+                min="0" max="10" step="1" value="5"
+                oninput="document.getElementById('valor-experiencia').textContent = this.value"
+            >
+
+            <label>Cor de preferência para a camiseta:
+                <input type="color" name="cor_camiseta" value="#1a73e8">
+            </label>
+
+            <label for="oficinas">Oficinas de interesse:</label>
+            <select 
+                name="oficinas[]" 
+                id="oficinas" 
+                multiple 
+                size="4"
+                aria-describedby="info-oficinas"
+            >
+                <option value="web">Robótica</option>
+                <option value="ia">Programação Frontend</option>
+                <option value="dados">Programação Backend</option>
+                <option value="seguranca">Computação Forense</option>
+                <option value="mobile">Análise de Dados</option>
+            </select>
+            <small id="info-oficinas">
+                Para selecioanr mais de uma oficina, use Ctrl (ou Cmd no Mac).
+            </small>
+
+        </fieldset>
+        <button type="submit">Confirmar inscrição</button>
+    </form>
+
+    <p><a href="../index.html">← Voltar para página inicial</a></p>
+
+</body>
+</html>

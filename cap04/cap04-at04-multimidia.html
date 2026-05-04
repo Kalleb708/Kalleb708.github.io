@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Geologica:wght,CRSV@100..900,0&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(255, 251, 226);
+        color: rgb(45, 40, 7);
+        font-family: "Cabin", sans-serif;
+        font-weight: 400;
+    }
+    h1 {
+        padding: 2rem;
+        background-color: rgb(44, 38, 0);
+        color:rgb(244, 244, 244);
+        text-align: center;
+        box-sizing: border-box;
+    }
+    main {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+    }
+    section {
+        text-align: center;
+        padding: 2rem;
+    }
+    .p-nav {
+        background-color: #472a00;
+        padding: 10px;
+        text-align: center;
+    }
+    .p-nav a {
+        color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+    }
+    .p-nav a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Recursos Multimídia — Programação Web 1</h1>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Aula em Vídeo</h2>
+      <figure>
+        <video controls width="800" height="450"
+               poster="poster-aula.jpg"
+               preload="metadata">
+          <source src="videos/aula-html.mp4" type="video/mp4" />
+          <source src="videos/aula-html.webm" type="video/webm" />
+          <track kind="subtitles" src="legendas/aula-html.vtt"
+                 srclang="pt" label="Português" default />
+          <p>
+            Seu navegador não suporta vídeo HTML5.
+            <a href="videos/aula-html.mp4">Baixe o vídeo aqui</a>.
+          </p>
+        </video>
+        <figcaption>
+          Vídeo 1 — Introdução ao HTML Semântico.
+          Produção própria, IFAL, 2026.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+        <h2>Audio</h2>
+        <figure>
+            <audio controls preload="metadata">
+                <source src="audio/episodio.mp3" type="audio/mpeg">
+                <source src="audio/episodio.ogg" type="audio/ogg">
+
+                <p>
+                    Seu navegador não suporta áudio HTML5.
+                    <a href="audio/episodio.mp3">Baixar o áudio</a>.
+                </p>
+            </audio>
+            <figcaption>
+                Episódio: Introdução ao HTML5 —
+                <a href="transcricao.html">Ver transcrição</a>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Vídeo do Youtube</h2>
+        <figure>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/Ejkb_YpuHWs?si=euavlo7A6MyU4HU7" 
+            title="Curso de HTML5" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <figcaption>
+                Vídeo: Curso de HTML5 e CSS3 — Canal: Curso em Vídeo — Plataforma: YouTube.
+            </figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Imagem</h2>
+        <figure>
+            <picture>
+                <source media="(min-width: 768px)" srcset="html-css.jpg">
+                <img 
+                    src="html-css.jpg" 
+                    alt="Banner HTML e CSS" 
+                    width="800" 
+                    height="400"
+                    loading="lazy">
+            </picture>
+            <figcaption>
+                Banner de HTML e CSS.
+            </figcaption>
+        </figure>
+    </section>
+
+    <!-- Bloco 2: <audio> -->
+    <!-- Bloco 3: <iframe> YouTube -->
+    <!-- Bloco 4: <picture> -->
+
+  </main>
+
+  <footer>
+    <p>
+      Atividade 4 — Capítulo 4 | Programação Web 1 |
+      Aluno: Kalleb Felipe Melo de Oliveira | Matrícula: 2026000985 |
+      <time datetime="2026-05-04">Maio de 2026</time>
+    </p>
+    <p class="p-nav"><a href="../index.html">← Voltar à página principal</a></p>
+  </footer>
+</body>
+</html>
